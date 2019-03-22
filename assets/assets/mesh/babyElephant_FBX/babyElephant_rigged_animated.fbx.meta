@@ -1,0 +1,195 @@
+{
+  "ver": "1.0.10",
+  "uuid": "55fd594f-cd91-4515-921e-39ebb7da626b",
+  "scaleFactor": 1,
+  "precomputeJointMatrix": false,
+  "animationFrameRate": 30,
+  "subMetas": {
+    "buffer.bin": {
+      "ver": "1.0.0",
+      "uuid": "bae33e61-f920-451e-8418-48f2f0b30e58",
+      "subMetas": {}
+    },
+    "babyElephantRetop.mesh": {
+      "ver": "1.0.1",
+      "uuid": "55fd594f-cd91-4515-921e-39ebb7da626b@babyElephantRetop.mesh",
+      "verts": 6916,
+      "tris": 13041,
+      "submeshes": 3,
+      "minPos": {
+        "x": -0.0261061545461416,
+        "y": -0.0597850456833839,
+        "z": 0.000503398769069463
+      },
+      "maxPos": {
+        "x": 0.025792870670557,
+        "y": 0.0608854964375496,
+        "z": 0.0866134837269783
+      },
+      "subMetas": {}
+    },
+    "babyElephant_rigged_animated-0.skeleton": {
+      "ver": "1.0.1",
+      "uuid": "5adfa235-7bd9-47f6-a036-be4a7eafcd12",
+      "subMetas": {}
+    },
+    "babyElephantRigged|babyElephant.death.sac": {
+      "ver": "1.0.1",
+      "uuid": "a599ec54-3c9b-401f-8794-b6db8a6eeff0",
+      "modelUuid": "55fd594f-cd91-4515-921e-39ebb7da626b",
+      "animationID": 0,
+      "name": "babyElephantRigged|babyElephant.death",
+      "maxFrameCount": 37,
+      "totalFrameCount": 835,
+      "duration": 1.5,
+      "animationFrameRate": 30,
+      "subMetas": {}
+    },
+    "babyElephantRigged|babyElephant.idle1.sac": {
+      "ver": "1.0.1",
+      "uuid": "7e1ad2f6-94e8-4af9-9dc6-7cd44d639cbd",
+      "modelUuid": "55fd594f-cd91-4515-921e-39ebb7da626b",
+      "animationID": 1,
+      "name": "babyElephantRigged|babyElephant.idle1",
+      "maxFrameCount": 127,
+      "totalFrameCount": 1457,
+      "duration": 6.208333492279053,
+      "animationFrameRate": 30,
+      "subMetas": {}
+    },
+    "babyElephantRigged|babyElephant.walk1.sac": {
+      "ver": "1.0.1",
+      "uuid": "b403e023-ef92-4248-ba54-050ae578ed43",
+      "modelUuid": "55fd594f-cd91-4515-921e-39ebb7da626b",
+      "animationID": 2,
+      "name": "babyElephantRigged|babyElephant.walk1",
+      "maxFrameCount": 69,
+      "totalFrameCount": 1205,
+      "duration": 3.2916667461395264,
+      "animationFrameRate": 30,
+      "subMetas": {}
+    },
+    "babyElephant_rigged_animated.prefab": {
+      "ver": "1.0.1",
+      "uuid": "55fd594f-cd91-4515-921e-39ebb7da626b@babyElephant_rigged_animated.prefab",
+      "optimizationPolicy": "AUTO",
+      "asyncLoadAssets": false,
+      "readonly": true,
+      "content": [
+        {
+          "__type__": "cc.Prefab",
+          "_name": "",
+          "_objFlags": 0,
+          "data": {
+            "__id__": 1
+          }
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Sprite",
+          "_objFlags": 0,
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_cascadeOpacityEnabled": true,
+          "_parent": null,
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 40,
+            "height": 36
+          },
+          "_children": [],
+          "_rotationX": 0,
+          "_rotationY": 0,
+          "_scaleX": 1,
+          "_scaleY": 1,
+          "_position": {
+            "__type__": "cc.Vec2",
+            "x": 0,
+            "y": 0
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_localZOrder": 0,
+          "_globalZOrder": 0,
+          "_tag": -1,
+          "_opacityModifyRGB": false,
+          "_reorderChildDirty": false,
+          "_id": "",
+          "_active": true,
+          "_components": [
+            {
+              "__id__": 2
+            }
+          ],
+          "_prefab": {
+            "__id__": 3
+          }
+        },
+        {
+          "__type__": "cc.Sprite",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 1
+          },
+          "_enabled": true,
+          "_spriteFrame": {
+            "__uuid__": "8cdb44ac-a3f6-449f-b354-7cd48cf84061"
+          },
+          "_type": 0,
+          "_sizeMode": 1,
+          "_fillType": 0,
+          "_fillCenter": {
+            "__type__": "cc.Vec2",
+            "x": 0,
+            "y": 0
+          },
+          "_fillStart": 0,
+          "_fillRange": 0,
+          "_isTrimmedMode": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_atlas": null
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": null,
+          "fileId": "d7118yAG5lKybkFOAh8koPL"
+        }
+      ],
+      "subMetas": {}
+    },
+    "babyElephantBodyMat.mtl": {
+      "ver": "1.0.1",
+      "uuid": "c4fdf7fe-4b62-4c5f-8e41-54a57b795b6e",
+      "name": "babyElephantBodyMat.mtl",
+      "subMetas": {}
+    },
+    "babyElephantRightEyeMat.mtl": {
+      "ver": "1.0.1",
+      "uuid": "880936db-42af-4e6d-aa03-40f916d90b2b",
+      "name": "babyElephantRightEyeMat.mtl",
+      "subMetas": {}
+    },
+    "babyElephantLeftEyeMat.mtl": {
+      "ver": "1.0.1",
+      "uuid": "f836b850-c169-4e3a-9dbd-641fbbc9e54f",
+      "name": "babyElephantLeftEyeMat.mtl",
+      "subMetas": {}
+    }
+  }
+}
