@@ -42,6 +42,9 @@ cc.Class({
             displayName: '弧度',
         },      
 
+        _model: null,
+
+
         
         _speed: 0,          //实际速度
         _speed1: 1,         //一段速度
@@ -52,6 +55,7 @@ cc.Class({
 
     onLoad: function()
     {
+
         this.angles = cc.v3();
         // joy下的Game组件
         this._joyCom = this.node.parent.getComponent('Game');
@@ -62,6 +66,7 @@ cc.Class({
             //对圆圈的触摸监听
             this._initTouchEvent();
         }
+        this.pose = this._playerNode.getComponent('pose');
     },
 
 
@@ -82,6 +87,7 @@ cc.Class({
     //更新移动目标
     update: function(dt)
     {
+        console.log('this._joyCom.directionType----' + this._joyCom.directionType);
         switch (this._joyCom.directionType)
         {
             case Common.DirectionType.ALL:   
@@ -94,16 +100,22 @@ cc.Class({
      //全方向移动
     _allDirectionsMove: function()
     {
-        console.log("angle----" + this._angle);
         this.angles.y = this._angle + 90;
+
         this._playerNode.eulerAngles = this.angles;
-        this._playerNode.x += Math.cos(this._angle * (Math.PI/180)) * this._speed * this.cameraRate;
-        this._playerNode.z -= Math.sin(this._angle * (Math.PI/180)) * this._speed * this.cameraRate;
+        let x = Math.cos(this._angle * (Math.PI/180)) * this._speed * this.cameraRate;
+        let y = Math.sin(this._angle * (Math.PI/180)) * this._speed * this.cameraRate;
+        if(x != 0 && y != 0) {
+            this.pose.walk();
+        }
+        else {
+            this.pose.idel();
+        }
+        this._playerNode.x += x;
+        this._playerNode.z -= y;
 
         this.camera.node.x += Math.cos(this._angle * (Math.PI/180)) * this._speed * this.cameraRate;
         this.camera.node.z -= Math.sin(this._angle * (Math.PI/180)) * this._speed * this.cameraRate;
-        // let targetPos = this._playerNode.convertToWorldSpaceAR(this._playerNode.getPosition());
-        // this.camera.node.parent.convertToNodeSpaceAR(this._playerNode.getPosition());
     },
 
      //计算两点间的距离并返回
