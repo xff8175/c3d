@@ -4,6 +4,7 @@ cc.Class({
 
     properties: {
         target: cc.Node,
+        camera: cc.Camera,
         _preProgress: Number
     },
 
@@ -28,6 +29,7 @@ cc.Class({
         this.target.y += suby;
         console.log("y:" + this.target.y);
         this._preProgress = sender.progress;
+        this.camera.node.y += suby;
 
         console.log("2 this._preProgress:" + this._preProgress);
         // console.log("2 this._preProgress:" + this._preProgress + " sender.progress:" + sender.progress + " y2:" + this.target.y);
