@@ -1,32 +1,49 @@
-// Learn cc.Class:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        enemy: cc.Node
+        player: cc.Node,
+        enemy: cc.Node,
+        collisionDamage: 0.1,
+        collisionDistance: 15
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
 
     start () {
 
     },
 
-    hident() {
-        console.log('hello-----1' + this.enemy.parent);
-        this.enemy.parent = null;
-        console.log('hello-----2' + this.enemy.parent);
+    update (dt) {
+        this.cc();
+    },
+    cc () {
+        let zeroPos = cc.v2();
+        let playerPos = cc.v2();
+        let enemyPos = cc.v2();
+        let dif = cc.v2();              
+        playerPos = this.player.convertToWorldSpaceAR(zeroPos, playerPos);
+
+        if(this.enemy != null) {
+            enemyPos = this.enemy.convertToWorldSpaceAR(zeroPos, enemyPos);
+            let distance = playerPos.sub(enemyPos, dif).mag();
+            if (distance < this.collisionDistance) {
+                this.enemy.removeFromParent(true);//
+                this.enemy = null;  //.removeFromParent(true);//
+                // let en = this.enemy;
+                // this.en.destroy();
+                // this.enemy = null;
+
+                console.log('collide-----------!');
+                // this.node.emit('collide-enemy', {dif, enemy, distance});
+                // if(this.enemy.active) {
+                //     this.enemy.active = false;
+                //     this.enemy.removeFromParent(true);// = null;
+                // }
+                // else {
+                //     this.enemy.active = true;
+                // }
+            }
+        }
     }
 
     // update (dt) {},
