@@ -70,7 +70,7 @@
       "subMetas": {}
     },
     "babyElephant_rigged_animated.prefab": {
-      "ver": "1.0.1",
+      "ver": "1.0.2",
       "uuid": "55fd594f-cd91-4515-921e-39ebb7da626b@babyElephant_rigged_animated.prefab",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
@@ -174,20 +174,23 @@
       "subMetas": {}
     },
     "babyElephantBodyMat.mtl": {
-      "ver": "1.0.1",
+      "ver": "1.0.2",
       "uuid": "c4fdf7fe-4b62-4c5f-8e41-54a57b795b6e",
+      "dataAsSubAsset": null,
       "name": "babyElephantBodyMat.mtl",
       "subMetas": {}
     },
     "babyElephantRightEyeMat.mtl": {
-      "ver": "1.0.1",
+      "ver": "1.0.2",
       "uuid": "880936db-42af-4e6d-aa03-40f916d90b2b",
+      "dataAsSubAsset": null,
       "name": "babyElephantRightEyeMat.mtl",
       "subMetas": {}
     },
     "babyElephantLeftEyeMat.mtl": {
-      "ver": "1.0.1",
+      "ver": "1.0.2",
       "uuid": "f836b850-c169-4e3a-9dbd-641fbbc9e54f",
+      "dataAsSubAsset": null,
       "name": "babyElephantLeftEyeMat.mtl",
       "subMetas": {}
     }

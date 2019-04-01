@@ -46,7 +46,7 @@
       "subMetas": {}
     },
     "animations.prefab": {
-      "ver": "1.0.1",
+      "ver": "1.0.2",
       "uuid": "b57be771-9a9a-4b99-8f9b-ef7090cc5bbe",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
@@ -150,8 +150,9 @@
       "subMetas": {}
     },
     "fox_material.mtl": {
-      "ver": "1.0.1",
+      "ver": "1.0.2",
       "uuid": "c8164546-74f5-483b-bfd8-94b576e86415",
+      "dataAsSubAsset": null,
       "name": "fox_material.mtl",
       "subMetas": {}
     }

@@ -30,6 +30,13 @@ cc.Class({
             type: cc.Integer,
             displayName: '镜头加速度',
         },   
+        currentPosLabel: {
+            default: null,
+            type: cc.Label,
+            displayName: '当前位置标签',
+        },  
+        
+        
 
         _angle: {
             default: 0,
@@ -112,6 +119,7 @@ cc.Class({
         }
         this._playerNode.x += x;
         this._playerNode.z -= y;
+        this.currentPosLabel.string = '位置:（x:' + Math.round(this._playerNode.x*100)/100 + '，y:' + Math.round(this._playerNode.y*100)/100 + '，z:' + Math.round(this._playerNode.z*100)/100 + '）';
 
         this.camera.node.x += Math.cos(this._angle * (Math.PI/180)) * this._speed * this.cameraRate;
         this.camera.node.z -= Math.sin(this._angle * (Math.PI/180)) * this._speed * this.cameraRate;
